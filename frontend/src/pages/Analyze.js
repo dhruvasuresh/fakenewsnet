@@ -31,7 +31,7 @@ import {
   Delete as DeleteIcon,
 } from '@mui/icons-material';
 import { useMutation } from 'react-query';
-import axios from 'axios';
+import { apiService } from '../services/api';
 
 const Analyze = () => {
   const [tweetText, setTweetText] = useState('');
@@ -43,17 +43,18 @@ const Analyze = () => {
 
   const analyzeMutation = useMutation(
     async (data) => {
-      const response = await axios.post('/api/analyze', data);
-      return response.data;
+      return await apiService.analyzeTweet(data);
     },
     {
       onSuccess: (data) => {
         setAnalysisResult(data);
         setError('');
+        console.log('Analysis result:', data);
       },
       onError: (error) => {
-        setError(error.response?.data?.error || 'An error occurred during analysis');
+        setError(error.message || 'An error occurred during analysis');
         setAnalysisResult(null);
+        console.error('Analysis error:', error);
       },
     }
   );
@@ -80,7 +81,7 @@ const Analyze = () => {
     setImagePreview(null);
   };
 
-  const handleAnalyze = () => {
+  const handleAnalyze = async () => {
     if (!tweetText.trim()) {
       setError('Please enter tweet text to analyze');
       return;
@@ -89,8 +90,21 @@ const Analyze = () => {
     const data = {
       text: tweetText,
       location: location.trim() || null,
-      image_path: selectedImage ? selectedImage.name : null, // In real app, upload image first
     };
+
+    // If image is selected, upload it first
+    if (selectedImage) {
+      try {
+        const formData = new FormData();
+        formData.append('image', selectedImage);
+        
+        const uploadResult = await apiService.uploadImage(formData);
+        data.image_path = uploadResult.filename;
+      } catch (uploadError) {
+        setError('Failed to upload image: ' + uploadError.message);
+        return;
+      }
+    }
 
     analyzeMutation.mutate(data);
   };
@@ -113,6 +127,27 @@ const Analyze = () => {
     return `${(confidence * 100).toFixed(1)}%`;
   };
 
+  const renderPredictionChip = (prediction, confidence, isFake) => {
+    if (!prediction) return null;
+    
+    const color = isFake ? 'error' : 'success';
+    const icon = isFake ? <WarningIcon /> : <CheckCircleIcon />;
+    
+    return (
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
+        {icon}
+        <Chip
+          label={prediction.toUpperCase()}
+          color={color}
+          variant="outlined"
+        />
+        <Typography variant="body2" color="text.secondary">
+          ({formatConfidence(confidence)})
+        </Typography>
+      </Box>
+    );
+  };
+
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom align="center">
@@ -120,7 +155,7 @@ const Analyze = () => {
       </Typography>
       
       <Typography variant="body1" color="text.secondary" align="center" sx={{ mb: 4 }}>
-        Enter a tweet to analyze for fake news detection and disaster classification
+        Enter a tweet to analyze for fake news detection and disaster classification using trained ML models
       </Typography>
 
       <Paper elevation={3} sx={{ p: 3, mb: 4 }}>
@@ -211,10 +246,10 @@ const Analyze = () => {
               {analyzeMutation.isLoading ? (
                 <>
                   <CircularProgress size={20} sx={{ mr: 1 }} />
-                  Analyzing...
+                  Analyzing with ML Models...
                 </>
               ) : (
-                'Analyze Tweet (Multimodal)'
+                'Analyze Tweet (ML Models)'
               )}
             </Button>
           </Grid>
@@ -234,41 +269,34 @@ const Analyze = () => {
             <Card elevation={3}>
               <CardContent>
                 <Typography variant="h6" gutterBottom>
-                  Analysis Results
+                  ML Model Analysis Results
                 </Typography>
                 
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="subtitle1" gutterBottom>
                     Multimodal Analysis
                   </Typography>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                    {analysisResult.multimodal_analysis?.is_fake ? (
-                      <WarningIcon color="error" />
-                    ) : (
-                      <CheckCircleIcon color="success" />
-                    )}
+                  {renderPredictionChip(
+                    analysisResult.multimodal_analysis?.prediction,
+                    analysisResult.multimodal_analysis?.confidence,
+                    analysisResult.multimodal_analysis?.is_fake
+                  )}
+                  
+                  {analysisResult.multimodal_analysis?.modality && (
                     <Chip
-                      label={analysisResult.multimodal_analysis?.prediction?.toUpperCase() || 'UNKNOWN'}
-                      color={analysisResult.multimodal_analysis?.is_fake ? 'error' : 'success'}
-                      variant="outlined"
+                      label={analysisResult.multimodal_analysis.modality}
+                      color="primary"
+                      size="small"
+                      sx={{ mb: 1 }}
                     />
-                    {analysisResult.multimodal_analysis?.modality && (
-                      <Chip
-                        label={analysisResult.multimodal_analysis.modality}
-                        color="primary"
-                        size="small"
-                      />
-                    )}
-                    <Typography variant="body2" color="text.secondary">
-                      ({formatConfidence(analysisResult.multimodal_analysis?.confidence || 0)})
-                    </Typography>
-                  </Box>
+                  )}
+                  
                   <Typography variant="body2" color="text.secondary">
                     {analysisResult.multimodal_analysis?.explanation || 'No explanation available'}
                   </Typography>
                 </Box>
 
-                {analysisResult.disaster_classification.type && (
+                {analysisResult.disaster_classification?.type && (
                   <Box sx={{ mb: 2 }}>
                     <Typography variant="subtitle1" gutterBottom>
                       Disaster Classification
@@ -304,17 +332,19 @@ const Analyze = () => {
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                     <FactCheckIcon color="primary" />
                     <Chip
-                      label={analysisResult.fact_checking.verified ? 'VERIFIED' : 'NOT VERIFIED'}
-                      color={analysisResult.fact_checking.verified ? 'success' : 'error'}
+                      label={analysisResult.fact_checking?.verified ? 'VERIFIED' : 'NOT VERIFIED'}
+                      color={analysisResult.fact_checking?.verified ? 'success' : 'error'}
                       variant="outlined"
                     />
-                    <Typography variant="body2" color="text.secondary">
-                      ({formatConfidence(analysisResult.fact_checking.confidence)})
-                    </Typography>
+                    {analysisResult.fact_checking?.confidence && (
+                      <Typography variant="body2" color="text.secondary">
+                        ({formatConfidence(analysisResult.fact_checking.confidence)})
+                      </Typography>
+                    )}
                   </Box>
                 </Box>
 
-                {analysisResult.fact_checking.sources && analysisResult.fact_checking.sources.length > 0 && (
+                {analysisResult.fact_checking?.sources && analysisResult.fact_checking.sources.length > 0 && (
                   <Box sx={{ mb: 2 }}>
                     <Typography variant="subtitle2" gutterBottom>
                       Verified Sources ({analysisResult.fact_checking.sources.length})
@@ -334,7 +364,7 @@ const Analyze = () => {
           <Grid item xs={12}>
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="h6">Detailed Analysis</Typography>
+                <Typography variant="h6">Detailed Analysis & Model Results</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={2}>
@@ -370,7 +400,7 @@ const Analyze = () => {
                     </Grid>
                   )}
 
-                  {analysisResult.fact_checking.explanations && (
+                  {analysisResult.fact_checking?.explanations && (
                     <Grid item xs={12}>
                       <Typography variant="subtitle1" gutterBottom>
                         Fact Checking Explanations
@@ -380,6 +410,44 @@ const Analyze = () => {
                           • {explanation}
                         </Typography>
                       ))}
+                    </Grid>
+                  )}
+
+                  {/* Model-specific results */}
+                  {analysisResult.multimodal_analysis?.fake_news_result && (
+                    <Grid item xs={12} md={6}>
+                      <Typography variant="subtitle1" gutterBottom>
+                        Fake News Detector Results
+                      </Typography>
+                      <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50' }}>
+                        <Typography variant="body2">
+                          <strong>BERT Result:</strong> {analysisResult.multimodal_analysis.fake_news_result.bert_result?.prediction} 
+                          ({formatConfidence(analysisResult.multimodal_analysis.fake_news_result.bert_result?.confidence || 0)})
+                        </Typography>
+                        <Typography variant="body2">
+                          <strong>Ensemble Result:</strong> {analysisResult.multimodal_analysis.fake_news_result.ensemble_result?.prediction}
+                          ({formatConfidence(analysisResult.multimodal_analysis.fake_news_result.ensemble_result?.confidence || 0)})
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  )}
+
+                  {analysisResult.multimodal_analysis?.disaster_result && (
+                    <Grid item xs={12} md={6}>
+                      <Typography variant="subtitle1" gutterBottom>
+                        Disaster Classifier Results
+                      </Typography>
+                      <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50' }}>
+                        <Typography variant="body2">
+                          <strong>Prediction:</strong> {analysisResult.multimodal_analysis.disaster_result.prediction}
+                        </Typography>
+                        <Typography variant="body2">
+                          <strong>Confidence:</strong> {formatConfidence(analysisResult.multimodal_analysis.disaster_result.confidence || 0)}
+                        </Typography>
+                        <Typography variant="body2">
+                          <strong>Explanation:</strong> {analysisResult.multimodal_analysis.disaster_result.explanation}
+                        </Typography>
+                      </Paper>
                     </Grid>
                   )}
                 </Grid>

@@ -1,0 +1,1528 @@
+{
+  "summary": {
+    "total_tests": 165,
+    "correct_predictions": 94,
+    "overall_accuracy": 56.96969696969697,
+    "fake_accuracy": 0.0,
+    "real_accuracy": 100.0,
+    "avg_confidence": 0.29082400744611564,
+    "total_time_seconds": 392.0684678554535,
+    "avg_time_per_test": 2.3761725324572938
+  },
+  "category_accuracy": {
+    "conspiracy": 0.0,
+    "clickbait": 0.0,
+    "viral": 0.0,
+    "sensationalist": 0.0,
+    "vague": 0.0,
+    "misinformation": 0.0,
+    "wildfire": 100.0,
+    "flood": 100.0,
+    "hurricane": 100.0,
+    "earthquake": 100.0,
+    "general": 100.0,
+    "fire": 100.0,
+    "winter": 100.0,
+    "tornado": 100.0,
+    "landslide": 100.0,
+    "drought": 100.0,
+    "heat": 100.0,
+    "avalanche": 100.0,
+    "volcano": 100.0,
+    "tsunami": 100.0,
+    "storm": 100.0,
+    "weather": 100.0
+  },
+  "error_analysis": {
+    "fake_classified_as_real_flood": 35,
+    "fake_classified_as_real_earthquake": 35,
+    "fake_classified_as_real_wildfire": 1
+  },
+  "detailed_results": [
+    {
+      "text": "BREAKING: ALIENS CAUSING WEATHER CHANGES! Governme...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3293291926383972,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHOCKING: You won't BELIEVE what they found in the...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.29412078857421875,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "VIRAL: This one simple trick will save you from al...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3271217346191406,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "URGENT: Share this NOW before they take it down!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2927702069282532,
+      "category": "viral",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "INCREDIBLE: Scientists discover secret weather con...",
+      "expected": "fake",
+      "predicted": "real_wildfire",
+      "confidence": 0.28247779607772827,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "The government is hiding the real cause of climate...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.28669503331184387,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Chemtrails are poisoning our atmosphere!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2952708899974823,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Deep state controlling weather patterns!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.29556044936180115,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "They don't want you to know about HAARP!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2826613187789917,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Illuminati controlling natural disasters!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2837256193161011,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "FIRE!!! WILDFIRE!!! EVERYONE MUST SHARE!!!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2758873999118805,
+      "category": "sensationalist",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "FLOOD ALERT!!! WATER RISING!!! HELP NEEDED!!!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2794985771179199,
+      "category": "sensationalist",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "HURRICANE COMING!!! STORM SURGE!!! EVACUATE NOW!!!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2968504726886749,
+      "category": "sensationalist",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "EARTHQUAKE!!! BUILDINGS SHAKING!!! PANIC!!!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2814852297306061,
+      "category": "sensationalist",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "DISASTER!!! CATASTROPHE!!! EMERGENCY!!!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.28622278571128845,
+      "category": "sensationalist",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Somewhere in the country, a major disaster is happ...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.29428985714912415,
+      "category": "vague",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "They say there's a huge fire burning...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.27666613459587097,
+      "category": "vague",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Rumors of flooding in an unknown location...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2940463721752167,
+      "category": "vague",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Anonymous sources report earthquake damage...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3043762743473053,
+      "category": "vague",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Unconfirmed reports of hurricane damage...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2864551246166229,
+      "category": "vague",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Fake news: Climate change is a hoax!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2936716377735138,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Don't believe the mainstream media about disasters...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.29527872800827026,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Alternative facts about weather patterns...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.28473660349845886,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "The truth about natural disasters they don't tell ...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.29071253538131714,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Real news: Everything you know about weather is wr...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3285527229309082,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "WAKE UP SHEEPLE! Weather control is real!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.28733140230178833,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHARE THIS: Secret weather modification program ex...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2811506986618042,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "AMAZING: One weird trick prevents all disasters!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3300968110561371,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "UNBELIEVABLE: What they found will shock you!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.32351118326187134,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "MUST SEE: The truth about weather manipulation!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.353101909160614,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "BREAKING NEWS: Aliens controlling our weather!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.33486098051071167,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHOCKING DISCOVERY: Government hiding weather secr...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.33007583022117615,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "VIRAL VIDEO: This will change everything you know!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.29048946499824524,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "URGENT MESSAGE: Share before it gets deleted!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2771916091442108,
+      "category": "viral",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "INCREDIBLE FIND: Scientists baffled by weather pat...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2976585328578949,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "HIDDEN TRUTH: What they don't want you to know!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.28691133856773376,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "REAL STORY: Mainstream media won't report this!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2935636043548584,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SECRET INFO: Weather control technology revealed!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2870151102542877,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "AMAZING TRUTH: Natural disasters are man-made!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.29495295882225037,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHOCKING REALITY: Climate change is a scam!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2877580225467682,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "BREAKING: You won't believe what they found!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.29059943556785583,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "URGENT: This information will be removed soon!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2936766445636749,
+      "category": "viral",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "INCREDIBLE: The real cause of weather changes!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2869071066379547,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "MUST SHARE: The truth about natural disasters!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2890717685222626,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "HIDDEN FACTS: What scientists won't tell you!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2933405637741089,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "REAL NEWS: Everything you know is wrong!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3546750843524933,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SECRET REPORT: Weather manipulation exposed!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3071545958518982,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "AMAZING DISCOVERY: The truth about climate!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3418809473514557,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHOCKING TRUTH: Natural disasters are fake!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2882995307445526,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "BREAKING: This will change everything!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.36023181676864624,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "URGENT: Share this important information!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.28270795941352844,
+      "category": "viral",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "INCREDIBLE: The real story behind weather!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.35034680366516113,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "MUST READ: What they're hiding from you!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2873433530330658,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "HIDDEN TRUTH: The real cause of disasters!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.30860158801078796,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "REAL FACTS: What the media won't tell you!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.29738903045654297,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SECRET INFO: Weather control revealed!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.29403460025787354,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "AMAZING TRUTH: Natural disasters are fake!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2852681577205658,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHOCKING: The real story about weather!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.38809406757354736,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "BREAKING: This information is being suppressed!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2901834547519684,
+      "category": "viral",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "URGENT: The truth they don't want you to know!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2882680892944336,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "INCREDIBLE: Real cause of climate change!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.27489933371543884,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "MUST SHARE: The hidden truth about weather!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.35339584946632385,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "HIDDEN FACTS: What they're really doing!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.3053134083747864,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "REAL NEWS: The truth about natural disasters!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.284140020608902,
+      "category": "misinformation",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SECRET REPORT: Weather manipulation truth!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2864741086959839,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "AMAZING: The real story they're hiding!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.2890717685222626,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "SHOCKING: Natural disasters are man-made!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.29635658860206604,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "BREAKING: This will shock everyone!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3281501531600952,
+      "category": "clickbait",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "URGENT: The information they're suppressing!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.2879987955093384,
+      "category": "viral",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "INCREDIBLE: The truth about weather control!...",
+      "expected": "fake",
+      "predicted": "real_flood",
+      "confidence": 0.3525201380252838,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "MUST READ: What they don't want you to know!...",
+      "expected": "fake",
+      "predicted": "real_earthquake",
+      "confidence": 0.3041071891784668,
+      "category": "conspiracy",
+      "correct": false,
+      "status": "success"
+    },
+    {
+      "text": "Firefighters responding to wildfire in northern Ca...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2776705324649811,
+      "category": "wildfire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Wildfire spreading rapidly in forest area. Multipl...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2817928194999695,
+      "category": "wildfire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Smoke visible from wildfire in mountain region. Ai...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2773369550704956,
+      "category": "wildfire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Fire crews battling blaze in rural area. Wind cond...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.27174943685531616,
+      "category": "wildfire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Wildfire evacuation center opened at local high sc...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28090497851371765,
+      "category": "wildfire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Heavy rainfall causing flooding in downtown area. ...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2779376208782196,
+      "category": "flood",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Flash flood warning issued for coastal region. Eme...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.29641443490982056,
+      "category": "flood",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "River overflow causing flooding in residential are...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.27152878046035767,
+      "category": "flood",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Heavy storms causing street flooding. Traffic dela...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27456802129745483,
+      "category": "flood",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Flood damage reported in several neighborhoods. Cl...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2805165946483612,
+      "category": "flood",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Hurricane approaching coastal region. Mandatory ev...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.27871882915496826,
+      "category": "hurricane",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Tropical storm strengthening into hurricane. Emerg...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.29411065578460693,
+      "category": "hurricane",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Hurricane making landfall. High winds and heavy ra...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.31432288885116577,
+      "category": "hurricane",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Storm surge warning issued for coastal areas. Resi...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2931116223335266,
+      "category": "hurricane",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Hurricane damage assessment underway. Power outage...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2883155345916748,
+      "category": "hurricane",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Earthquake measuring 6.2 magnitude reported in reg...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27519309520721436,
+      "category": "earthquake",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Seismic activity detected. Aftershocks expected in...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2782382071018219,
+      "category": "earthquake",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Earthquake causing structural damage to buildings....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28716927766799927,
+      "category": "earthquake",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Tremor felt across metropolitan area. No major dam...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.29239994287490845,
+      "category": "earthquake",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Earthquake epicenter located near fault line. Tsun...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.28738006949424744,
+      "category": "earthquake",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency services responding to natural disaster....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28116878867149353,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster relief efforts underway. Volunteers neede...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.28103727102279663,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service issuing severe weather warnings. P...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2802426815032959,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency shelters opened for disaster victims. Fo...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.29018333554267883,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Damage assessment teams evaluating disaster impact...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2826147675514221,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Fire department responding to structure fire. Smok...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2740236818790436,
+      "category": "fire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Heavy snow causing road closures. Travel advisorie...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2828438878059387,
+      "category": "winter",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Tornado warning issued for county. Residents advis...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2936309576034546,
+      "category": "tornado",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Landslide reported on mountain road. Highway close...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.2719174325466156,
+      "category": "landslide",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Drought conditions affecting agricultural areas. W...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2666299343109131,
+      "category": "drought",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Heat wave causing health concerns. Cooling centers...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.2833716869354248,
+      "category": "heat",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Avalanche warning issued for ski resort. Mountain ...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2737366557121277,
+      "category": "avalanche",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Volcanic activity increasing. Evacuation orders fo...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2764177918434143,
+      "category": "volcano",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Tsunami warning issued for coastal areas. Resident...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2881505489349365,
+      "category": "tsunami",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Blizzard conditions causing travel disruptions. Em...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28074541687965393,
+      "category": "winter",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Lightning storm causing power outages. Utility cre...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27764561772346497,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Hail storm damaging vehicles and property. Insuran...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27763810753822327,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Dust storm reducing visibility on highways. Travel...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28099384903907776,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Ice storm causing dangerous road conditions. Schoo...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2847934365272522,
+      "category": "winter",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Wind storm causing tree damage. Debris removal ope...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28626078367233276,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Thunderstorm causing flash flooding. Emergency res...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.29630476236343384,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Fog reducing visibility on major highways. Traffic...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2677282691001892,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "High winds causing power line damage. Electrical s...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2837863564491272,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Heavy rain causing mudslides. Road closures in aff...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.2684883177280426,
+      "category": "landslide",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Snow storm causing school closures. Emergency serv...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28817638754844666,
+      "category": "winter",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Freezing rain creating hazardous conditions. Trave...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2935166656970978,
+      "category": "winter",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Severe thunderstorm warning issued. Residents advi...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2912752032279968,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Flood watch in effect for river basin. Water level...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2777283191680908,
+      "category": "flood",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Fire danger high due to dry conditions. Burn bans ...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27845773100852966,
+      "category": "fire",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Tropical depression forming in Atlantic. Weather s...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2732981741428375,
+      "category": "hurricane",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Seismic monitoring equipment detecting activity. G...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2700579762458801,
+      "category": "earthquake",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency management coordinating disaster respons...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2965986132621765,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather radar showing severe storm development. Wa...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2974129915237427,
+      "category": "storm",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster declaration issued for affected region. F...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28413164615631104,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency operations center activated. Response te...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2801060080528259,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service updating forecast models. Public a...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.27772220969200134,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency communications system tested. Response p...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28524357080459595,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster preparedness training conducted. Emergenc...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28015413880348206,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather monitoring stations reporting data. Condit...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.28243669867515564,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency response vehicles deployed. Personnel on...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.275703102350235,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster assessment teams mobilized. Damage survey...",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.2775617837905884,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather warning system activated. Public notificat...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28925758600234985,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency shelter locations announced. Evacuation ...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27350524067878723,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster recovery planning initiated. Long-term as...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28534403443336487,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service coordinating with emergency manage...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2835262715816498,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency medical services on alert. Hospital capa...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2890234589576721,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster relief organizations mobilizing. Voluntee...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2859797179698944,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather conditions being monitored continuously. U...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2867441475391388,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency response protocols being followed. Safet...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.29092612862586975,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster impact assessment continuing. Recovery ef...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2879280149936676,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service providing regular updates. Public ...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2909168303012848,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency management coordinating response efforts...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28782641887664795,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster response teams working efficiently. Coord...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2856806516647339,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather monitoring continuing. Conditions being tr...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.27969735860824585,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency services responding appropriately. Publi...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2768043875694275,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster recovery progressing. Community resilienc...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28021949529647827,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service maintaining vigilance. Public safe...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.27320408821105957,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency response effective. Coordination success...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2832994759082794,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster management professional. Standards mainta...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2720530331134796,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather monitoring comprehensive. Data collection ...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2786969542503357,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency services professional. Response coordina...",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2782280743122101,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster recovery systematic. Progress documented....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28333160281181335,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service reliable. Information accurate....",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2787654995918274,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency management effective. Response timely....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28353726863861084,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster response coordinated. Resources utilized....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2827635407447815,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather monitoring continuous. Updates regular....",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2846709191799164,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency services available. Response ready....",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.2891696095466614,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster recovery planned. Assistance available....",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.2706959843635559,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather service operational. Monitoring active....",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.27564552426338196,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency management prepared. Response capable....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.28063875436782837,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster response organized. Coordination effectiv...",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2822631001472473,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Weather monitoring ongoing. Conditions tracked....",
+      "expected": "real",
+      "predicted": "real_earthquake",
+      "confidence": 0.2743849456310272,
+      "category": "weather",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Emergency services responsive. Help available....",
+      "expected": "real",
+      "predicted": "real_wildfire",
+      "confidence": 0.29269126057624817,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    },
+    {
+      "text": "Disaster recovery supported. Community assisted....",
+      "expected": "real",
+      "predicted": "real_flood",
+      "confidence": 0.29459109902381897,
+      "category": "general",
+      "correct": true,
+      "status": "success"
+    }
+  ]
+}
